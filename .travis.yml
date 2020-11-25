@@ -42,7 +42,7 @@ deploy:
     key: springboot-webservice.zip
 
     bundle_type: zip
-    application: facvis-springboot-webservice
+    application: springboot-webservice
     deployment_group: facvis-springboot-webservice-group
     region: ap-northeast-2
     wait-until-deployed: true
