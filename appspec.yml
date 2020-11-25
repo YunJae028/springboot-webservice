@@ -13,6 +13,6 @@ permissions: #ec2-user권한을 줌
 
 hooks:
   ApplicationStart:
-    - location: deploy.sho
+    - location: deploy.sh
       timeout: 60
       runas: ec2-user
