@@ -6,10 +6,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter // Getter 메소드 추가
 @NoArgsConstructor //룸복 기본생성자 자동 추가
-@Entity //테이블과 링크될 클래스
+@Entity //실제 DB의 테이블과 링크될 클래스임을 의미
+// -> JPA사용시 실제쿼리 대신 entity 클래스 수정통해 작업
 public class Posts extends BaseTimeEntity {
     @Id //테이블 pk
     @GeneratedValue(strategy = GenerationType.IDENTITY) //pk 생성 규칙
