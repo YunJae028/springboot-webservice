@@ -1,33 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>스프링 부트 웹서비스</title>
-        <meta http-equiv="Content-Type"
-              content="text/html;charset=UTF-8">
-    </head>
-    <body>
+
     {{>layout/header}}
-        <h1>게시판</h1>
-        <div class = "col-md-12">
-            <!-- 로그인기능 영역-->
-            <div class = "row">
-                <div class = "col-md-6">
-                    <a href="/posts/save" role = "button"
-                                class = "btn btn-primary">글 등록</a>
-                    {{#userName}}
-                        Logged in as : <span id = "user">{{userName}}</span>
-                        <a href="/logout" class="btn btn-info active" role="button">Logout</a>
-                    {{/userName}}
-                    {{^userName}}
-                        <a href="/oauth2/authorization/google"
-                           class ="btn btn-success active" role="button">Google Login</a>
-                    {{/userName}}
-                    {{^userName}}
-                        <a href="/oauth2/authorization/naver"
-                           class ="btn btn-secondary active" role="button">Naver Login</a>
-                    {{/userName}}
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <h3 class="my-4 text-center">Category</h3>
             </div>
+            <div class="col-lg-10 my-4 mb-4 border border-dark rounded-lg">
+            <!-- 로그인기능 영역-->
             <br>
             <!-- 목록출력영역 -->
             <table class = "table table-hover">
@@ -51,6 +30,9 @@
                 </tbody>
             </table>
         </div>
-    {{>layout/footer}}
+        </div>
+    </div>
+    <a href="/posts/save" role = "button" class = "btn btn-secondary mb-3">글 등록</a>
+        {{>layout/footer}}
     </body>
 </html>
