@@ -1,0 +1,28 @@
+{{>layout/header}}
+
+<!-- 게시물 내용 출력 -->
+<div class="container my-1">
+    <div class="row">
+        <table class="table">
+            <thead>
+            <tr class="table-active">
+                <th scope="col" style="width: 60%">{{post.title}}<br>
+                    {{post.author}}</th>
+                <th scope="col" style="width: 40%" class="text-right">
+                    <br>{{post.modifiedDate}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><pre>{{post.content}}</pre></td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="/posts/update/{{id}}" role = "button" class = "btn btn-secondary mb-3">수정</a>
+    </div>
+</div>
+
+{{>layout/footer}}
+</body>
+</html>
+

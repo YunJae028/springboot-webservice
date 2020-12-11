@@ -21,6 +21,6 @@ public class IndexControllerTest {
     public void mainpage_loading(){
         String body = this.restTemplate.getForObject("/",String.class);
 
-        assertThat(body).contains("게시판");
+        assertThat(body).contains("게시글번호");
     }
 }
